@@ -1,0 +1,153 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sub-header {
+  font-size: 16px;
+}
+
+img {
+	max-width:500px;
+}
+
+#homelogo {
+  height: 365px;
+  background: url(/assets/dev_logo.jpeg);
+  background-size:365px;
+  margin-top: 16px;
+  margin-left: 50px;
+  background-repeat: no-repeat;
+}
+
+#logo {
+  height: 365px;
+  background: url(/assets/dev_logo.jpeg);
+  background-size:365px;
+  margin-top: 16px;
+  margin-left: 50px;
+  background-repeat: no-repeat;
+}
+
+body, html{
+    background-color:#EAE9E1;
+    width:900px;
+    height: cover;
+    margin: auto;
+    font-family: Ubuntu, sans-serif;
+}
+
+
+#more_button {
+  margin-top: 62px;
+  margin-left: 170px;
+  padding-bottom: 50px;
+  background: url(/assets/morebuttonsprite2.png);
+  background-position: 0px -54px;
+  background-size:100px 100px;
+  background-repeat: no-repeat;
+}
+
+#more_button:hover {
+  background-position: 0px 5px;
+}
+
+.posts {
+    width: 100%;
+
+  .post-author {
+    font-size: 12px;
+  }
+
+  .post-content {
+    
+
+  }
+
+  .post-title {
+    font-style: bold;
+    margin-bottom: 10px;
+
+  }
+}
+
+
+#titlebox {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: -30px;
+  max-width: 85%;
+  max-height: auto
+}
+
+#homeposts {
+  margin-left: 28px;
+  margin-top: -775px;
+}
+
+.infobox {
+    position: relative;
+    float: right;
+    margin-right: 60px;
+    margin-top: -20px;
+    background: url(/assets/smallinfoblankbox.png); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:block;
+    height: 165px;
+    width: 278px
+}
+
+.infotext {
+    position: relative;
+    top: 15%;
+    left: 9%;
+    width: 85%
+}
+
+#epictetusbox {
+  height: 450px;
+  width: 420px;
+  margin-left: 12px;
+  margin-top: 60px;
+  background: url(/assets/epictetusbox.png); 
+  background-position: center;
+  background-size: 270px 410px;
+  background-repeat: no-repeat;
+}
+
+#epictetustext {
+    position: relative;
+    top: 20%;
+    left: 27%;
+    width: 45%;
+
+}
+
+#epictetusphoto {
+    height: 100px;
+    width: 215px;
+    margin-top: -5px;
+    margin-left: 215px;
+    display: block;
+    background: url(/assets/Epictetus.jpeg); 
+    background-size: 125px;
+    background-repeat: no-repeat;
+
+}
+
+a:link {color:#286981 !important; text-decoration: none;}      
+a:visited {color:#3891B1 !important;}
+a:hover {color:#12120A !important;}
+a:active {color:#3691B1 !important;}
+
+
+a:link {background-color:#FFFFFF !important;}
+a:visited {background-color:#FFFFFF !important;}
+a:hover {background-color:#FFFFFF !important;}
+a:active {background-color:#FFFFFF !important;}
+
+#post {
+  margin-top: 40px;
+  margin-left: 40px;
+}

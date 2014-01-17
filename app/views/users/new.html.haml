@@ -1,0 +1,25 @@
+
+
+
+
+#adminposts
+  %br
+  %br
+  -if current_user
+    = form_for @user do |f|
+      = f.label :email
+      = f.text_field :email
+      %br/
+      = f.label :password
+      = f.password_field :password
+      %br/
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+      %br/
+      = f.submit "sign up"
+  -else
+    %h5
+      Please first login in order to create a new user.
+    %br
+    = render 'login'
+    = link_to 'Back', posts_path

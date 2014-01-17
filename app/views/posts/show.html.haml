@@ -1,0 +1,26 @@
+.row-fluid
+  .span6
+    #post
+      %p
+        %b
+        .post-title
+          = @post.title
+        = raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+
+      %p
+        - if @post.watercolor.file?
+          = image_tag @post.watercolor.url(:large)
+      %p
+        = @post.intro.html_safe
+        = @post.content.html_safe
+        |
+        #{link_to 'Back', posts_path}
+
+
+        = render "comments"
+
+  .span6
+    = link_to index_path do
+      #logo
+
+

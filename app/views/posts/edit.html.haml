@@ -1,0 +1,13 @@
+
+#adminposts
+  %br
+  %h1 Edit post
+  %br
+  -if current_user
+    = render 'form'
+    = link_to '- Show -', @post
+    = link_to 'Back -', posts_path
+  -else 
+    = render 'login'
+  %br
+  %br

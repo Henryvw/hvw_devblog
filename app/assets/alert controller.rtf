@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0   def create\
+    #alert = Alert.new(params[:alert].reject \{ |key,_| ["location","crowd_ids"].include? key \})\
+    #binding.pry\
+    alert_hash = params[:alert].reject \{ |key,_| ["location","crowd_ids"].include? key \}\
+    fix_location_and_crowds_params(alert_hash)\
+    respond_to do |format|\
+      begin\
+        alert=Alert.new(alert_hash)\
+        alert.save!\
+        send_alerts(alert)\
+        flash[:notice] = "Alert was successfully created"\
+        format.html\{redirect_to alert_path(alert)\}\
+        format.json \{ render json: alert.id, status: :ok \}\
+      rescue\
+          flash[:notice] = "Failed to create an alert, possibly because no crowd was selected" \
+          format.html\{ redirect_to new_alert_path(alert) \}\
+          format.json \{ render json: alert.errors, status: :unprocessable_entity \}\
+      end\
+    end\
+  end\
+  \
+\
+def fix_location_and_crowds_params(alert_hash)\
+    alert_hash.merge!(:crowd_ids => [])\
+    alert_hash.merge!(:locations => [])\
+    if params[:alert][:location]\
+      alert_hash[:locations] = [Location.create(address: params[:alert][:location][:address])]\
+    end\
+    if params[:safetyadmin] == "1"\
+      current_user.visible_crowds.each do |crowd|\
+        alert_hash[:crowd_ids] << crowd.id\
+      end\
+    else\
+      params[:alert][:crowd_ids].reject \{ |id| id == "" \}.each do |crowd_id|\
+        alert_hash[:crowd_ids] << crowd_id\
+      end\
+    end\
+    #return alert_hash\
+  end}
