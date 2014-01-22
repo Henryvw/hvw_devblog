@@ -22,14 +22,14 @@ gem 'actionpack-action_caching'
 
 group :development do
 	gem 'pg'
-  gem 'pry'
+  	gem 'pry'
 end
 
 gem "bcrypt-ruby", '~> 3.0.0'
 
 group :production do
-	gem 'pg'
-  gem 'rails_12factor'
+	gem 'mysql2'
+  	gem 'rails_12factor'
 end
 
 # Gems used only for assets and not required
