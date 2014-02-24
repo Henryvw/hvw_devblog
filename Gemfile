@@ -12,6 +12,7 @@ gem 'truncate_html'
 gem 'kaminari'
 gem 'fog'
 gem 'dotenv-rails'
+gem "bcrypt-ruby", '~> 3.0.0'
 
 #Railscast said to add these gems to help with Rails 4 upgrade
 gem 'protected_attributes'
@@ -22,11 +23,8 @@ gem 'actionpack-action_caching'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
-	gem 'pg'
   	gem 'pry'
 end
-
-gem "bcrypt-ruby", '~> 3.0.0'
 
 group :production do
   gem 'rails_12factor'
