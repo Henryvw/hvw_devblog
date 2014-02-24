@@ -3,14 +3,15 @@ ruby "2.0.0"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
 gem 'twitter-bootstrap-rails', '2.1.6'
-gem 'less-rails'
+gem 'less-rails', '2.3.3'
 gem 'paperclip', '~> 3.5.1'
 gem 'acts-as-taggable-on'
 gem 'tinymce-rails', '~> 4.0.10'
-gem 'nokogiri' 
+gem 'nokogiri'
 gem 'truncate_html'
 gem 'kaminari'
-
+gem 'fog'
+gem 'dotenv-rails'
 
 #Railscast said to add these gems to help with Rails 4 upgrade
 gem 'protected_attributes'
@@ -28,8 +29,8 @@ end
 gem "bcrypt-ruby", '~> 3.0.0'
 
 group :production do
-	gem 'mysql2'
-  	gem 'rails_12factor'
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
