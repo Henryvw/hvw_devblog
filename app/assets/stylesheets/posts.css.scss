@@ -59,14 +59,14 @@ body, html{
   }
 
   .post-content {
-    
+
 
   }
 
   .post-title {
     font-style: bold;
-    margin-bottom: 10px;
-
+    padding-: 10px;
+    line-height:140%
   }
 }
 
@@ -89,7 +89,7 @@ body, html{
     float: right;
     margin-right: 60px;
     margin-top: -20px;
-    background: url(/assets/smallinfoblankbox.png); 
+    background: url(/assets/smallinfoblankbox.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,7 +110,7 @@ body, html{
   width: 420px;
   margin-left: 12px;
   margin-top: 60px;
-  background: url(/assets/epictetusbox.png); 
+  background: url(/assets/epictetusbox.png);
   background-position: center;
   background-size: 270px 410px;
   background-repeat: no-repeat;
@@ -130,13 +130,13 @@ body, html{
     margin-top: -5px;
     margin-left: 215px;
     display: block;
-    background: url(/assets/Epictetus.jpeg); 
+    background: url(/assets/Epictetus.jpeg);
     background-size: 125px;
     background-repeat: no-repeat;
 
 }
 
-a:link {color:#286981 !important; text-decoration: none;}      
+a:link {color:#286981 !important; text-decoration: none;}
 a:visited {color:#3891B1 !important;}
 a:hover {color:#12120A !important;}
 a:active {color:#3691B1 !important;}
