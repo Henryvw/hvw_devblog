@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.1"
+ruby "2.1.4"
 gem 'rails', '4.0.0'
 gem 'activesupport', '~> 4.0.0.rc2'
 gem 'twitter-bootstrap-rails', '2.1.6'
